@@ -1,4 +1,5 @@
 public class Main {
+
     public static EmployeeBook employeeBook = new EmployeeBook();
 
     public static void printSeparator() {
