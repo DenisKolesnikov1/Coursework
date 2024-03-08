@@ -37,12 +37,12 @@ public class EmployeeBook {
     }
 
 
-    public String freeMaxSalary() {
-        return returnFullname(maxSalary());
+    public String freeMaxSalary(String String) {
+        return returnFullname(maxSalary(), String );
     }
 
-    private String returnFullname(int i) {
-        return null;
+    private String returnFullname(int i, String String) {
+        return String;
     }
 
 

@@ -12,10 +12,13 @@ public class Employee {
 
     public Employee(String nameFull, int numDepartment, double salary) {
         this.nameFull = nameFull;
-        int activeDepartment = numDepartment;
+        SetNumDepartment(numDepartment);
         this.salary = salary;
+        this.id = counter++;
     }
 
+    private void SetNumDepartment(int numDepartment) {
+    }
 
 
     public String getNameFull() {
@@ -61,7 +64,7 @@ public class Employee {
     }
 
 
-    public void activeDepartment(int numDepartment) {
+    private void activeDepartment(int numDepartment) {
         if (numDepartment < 1 || numDepartment > 5) {
             throw new IllegalArgumentException("Такого отдела нет. Укажите отдел с 1 по 5.");
         } else {
@@ -77,6 +80,7 @@ public class Employee {
         Employee employee = (Employee) o;
         return numDepartment == employee.numDepartment && Double.compare( salary, employee.salary ) == 0 && id == employee.id && counter == employee.counter && Objects.equals( nameFull, employee.nameFull );
     }
+
 
     @Override
     public int hashCode() {

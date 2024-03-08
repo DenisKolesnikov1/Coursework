@@ -21,7 +21,8 @@ public class Main {
         employees[0].setSalary( 200000 );
         employees[5].setNumDepartment( 3 );
         employeeBook.setEmployees(employees);
-        
+
+
         printEmployees(employees);
         printSeparator();
         System.out.println("Затраты на зп составляют: " + countCosts(employees) + "рублей.");
