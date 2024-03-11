@@ -2,7 +2,6 @@ import java.util.Objects;
 
 
 public class Employee {
-
     private String nameFull;
     private int numDepartment;
     private double salary;
@@ -12,13 +11,11 @@ public class Employee {
 
     public Employee(String nameFull, int numDepartment, double salary) {
         this.nameFull = nameFull;
-        SetNumDepartment(numDepartment);
+        activeDepartment(numDepartment);
         this.salary = salary;
         this.id = counter++;
     }
 
-    private void SetNumDepartment(int numDepartment) {
-    }
 
 
     public String getNameFull() {
@@ -54,13 +51,10 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "nameFull='" + nameFull + '\'' +
-                ", numDepartment=" + numDepartment +
-                ", salary=" + salary +
-                ", id=" + id +
-                ", counter=" + counter +
-                '}';
+        return "id: " + id +
+                "Полное имя" + nameFull +
+                ", отдел: " + numDepartment +
+                ", зарплата сотрудника: " + salary + " рублей.";
     }
 
 
@@ -78,7 +72,7 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return numDepartment == employee.numDepartment && Double.compare( salary, employee.salary ) == 0 && id == employee.id && counter == employee.counter && Objects.equals( nameFull, employee.nameFull );
+        return id == employee.id && Objects.equals(nameFull, employee.nameFull);
     }
 
 

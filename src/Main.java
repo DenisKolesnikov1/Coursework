@@ -44,8 +44,8 @@ public class Main {
 
     public static int countCosts(Employee[] employees) {
         int result = 0;
-        for (int i = 0; i < employees.length; i++) {
-            result = (int) (result + employees[i].getSalary());
+        for (Employee employee : employees) {
+            result = (int) (result + employee.getSalary());
         }
         return result;
     }

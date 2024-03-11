@@ -101,6 +101,7 @@ public class EmployeeBook {
     }
 
 
+
     public String freeMaxSalary(int depart) {
         return returnFullName(maxSalary(depart));
     }
